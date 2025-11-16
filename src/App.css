@@ -101,6 +101,7 @@ body {
 }
 .project-card,
 .skill-card {
+  color: #222 !important;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
@@ -292,9 +293,14 @@ body {
   }
 }
 
-/* Optional: Hide nav-links on desktop if hamburger is used */
 @media (max-width: 400px) {
   .nav-links {
     width: 100vw;
   }
+}
+.project-card h3,
+.project-card p,
+.skill-card h4,
+.skill-card p {
+  color: #222;
 }
