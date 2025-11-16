@@ -1,0 +1,300 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+.navbar {
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  gap: 2rem;
+  background: #222;
+  color: #fff;
+  padding: 1rem 2rem;
+  align-items: center;
+  justify-content: flex-end;
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+}
+.navbar h1 {
+  flex-grow: 1;
+  font-size: 1.5rem;
+  margin: 0;
+}
+.navbar a,
+.navbar .admin-btn {
+  color: #fff;
+  text-decoration: none;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.navbar .admin-btn {
+  background: #1976d2;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+}
+.navbar .admin-btn:hover {
+  background: #1565c0;
+}
+.home-section {
+  position: relative;
+  overflow: hidden;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10rem 2rem 2rem 2rem;
+  z-index: 0;
+  color: #fff;
+}
+.home-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://i.pinimg.com/originals/81/17/8b/81178b47a8598f0c81c4799f2cdd4057.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(0.2px) brightness(0.5);
+  z-index: 1;
+}
+.home-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+#title {
+  font-size: 1.6rem;
+}
+
+#projects,
+#skills h2 {
+  text-align: center;
+  margin-top: 2rem;
+}
+.project-list,
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+.project-list {
+  padding: 5rem;
+  background-image: url("https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmVlaTdpMnc1d2JxY3QyN2ZmdDRvNDM3dGhjM3N6cm1mbHF2b3MyNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/f3iwJFOVOwuy7K6FFw/giphy.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.skill-list {
+  padding: 5rem;
+  background-image: url("https://iqrasys.com/assets/images/animi.gif");
+}
+.project-card,
+.skill-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  padding: 1.5rem;
+  width: 250px;
+  text-align: center;
+}
+.project-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.project-card:hover {
+  box-shadow: 0 4px 24px rgba(25, 118, 210, 0.15);
+  transform: translateY(-4px) scale(1.03);
+  transition: 0.2s;
+  cursor: pointer;
+}
+.footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+.admin-panel {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+  z-index: 1000;
+  min-width: 320px;
+}
+.admin-panel .close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #f44336;
+  color: #fff;
+  border: none;
+  width: 30px;
+  height: 35px;
+  font-size: 1rem;
+  border-radius: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.admin-panel form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-bottom: 1.5rem;
+}
+.admin-panel input,
+.admin-panel textarea {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.admin-panel button[type="submit"] {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.admin-panel button[type="submit"]:hover {
+  background: #1565c0;
+}
+.delete-btn {
+  background: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 1rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+.delete-btn:hover {
+  background: #b71c1c;
+}
+
+/* Logo styling */
+.logo {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-right: auto;
+  letter-spacing: 1px;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 35px;
+  height: 35px;
+  background: none;
+  border: 2px solid #fff;
+  cursor: pointer;
+  margin-left: 1rem;
+  z-index: 1100;
+  padding: 4px 0;
+}
+.line {
+  background-color: #fff;
+  height: 2px;
+  width: 80%;
+  display: block;
+  margin: auto;
+  border-radius: 2px;
+}
+
+/* Navbar links container */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+@media (max-width: 400px) {
+  .navbar {
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    padding: 0.7rem 0.7rem;
+    position: relative;
+  }
+  .logo {
+    font-size: 0.95rem;
+    padding: 0.2rem 0;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    max-width: 100vw;
+    width: 100vw;
+    background: #222;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+    padding: 1.2rem 1rem 1rem 1.2rem;
+    display: none;
+    z-index: 1001;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .navbar a,
+  .navbar .admin-btn {
+    font-size: 1rem;
+    width: 100%;
+    text-align: left;
+    padding: 0.5rem 0;
+  }
+  .home-section {
+    padding: 5rem 0.5rem 1rem 0.5rem;
+  }
+  .project-list,
+  .skill-list {
+    padding: 1rem 0.2rem;
+    gap: 0.7rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-card,
+  .skill-card {
+    width: 80vw;
+    min-width: 0;
+    padding: 1rem;
+  }
+}
+
+/* Optional: Hide nav-links on desktop if hamburger is used */
+@media (max-width: 400px) {
+  .nav-links {
+    width: 100vw;
+  }
+}
